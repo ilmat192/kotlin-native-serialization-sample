@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlinVersion"
+    }
+}
+
+apply plugin: 'org.jetbrains.kotlin.platform.native'
+apply plugin: 'kotlinx-serialization-native'
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven { url "http://kotlin.bintray.com/kotlinx" }
+    maven { url "http://kotlin.bintray.com/kotlin-eap" }
+}
+
+components.main {
+    dependencies {
+        implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serializationRuntimeVersion"
+    }
+}

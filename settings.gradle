@@ -1,0 +1,4 @@
+enableFeaturePreview('GRADLE_METADATA')
+
+//includeBuild '/Users/jetbrains/work/sources/kotlin-native/shared'
+//includeBuild '/Users/jetbrains/work/sources/kotlin-native/tools/kotlin-native-gradle-plugin'
